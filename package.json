@@ -1,8 +1,8 @@
 {
-  "name": "react-minimal",
+  "name": "react-minimal-boilerplate",
   "version": "0.1.0",
   "private": false,
-  "license": "GPLv3",
+  "license": "GPL-3.0",
   "dependencies": {
     "autoprefixer": "7.1.1",
     "babel-core": "6.25.0",

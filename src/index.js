@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './containers/Main';
+import Main from './containers/Main';
 import registerServiceWorker from './registerServiceWorker';
+// Use normalize for every page
 import 'normalize.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Main />, document.getElementById('root'));
 registerServiceWorker();

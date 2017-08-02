@@ -7,10 +7,13 @@ class Main extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            // Initialize states
             fruits: null
         };
     }
 
+    // When the main component mounts, add some items to the 'fruits' state after a short delay
+    // This will trigger re-rendering for 'FirstComponent'
     componentDidMount() {
         setTimeout(() => {
             this.setState({ fruits: ['banana', 'apple', 'orange', 'vodka', 'kiwi'] });
@@ -18,11 +21,14 @@ class Main extends Component {
     }
 
     render() {
-        let myFruits = this.state.fruits ? 
-        this.state.fruits.map((fruit, key) => {
-            return <FirstComponent fruit={fruit} key={key}/>
-        }) : 
-        null;
+        // Conditional to check if 'fruits' state contains something
+        // if so, map (loop) the items from the state and for each render 'FirstComponent'
+        // with passing the item name and index as properties to the component
+        let myFruits = this.state.fruits ?
+            this.state.fruits.map((fruit, key) => {
+                return <FirstComponent fruit={fruit} key={key} />
+            }) :
+            null;
         return (
             <div className="Main">
                 <div className="Main-header">

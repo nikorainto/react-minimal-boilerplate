@@ -15,6 +15,10 @@ class Main extends Component {
     // When the main component mounts, add some items to the 'fruits' state after a short delay
     // This will trigger re-rendering for 'FirstComponent'
     componentDidMount() {
+        this.setStateAfterDelay();
+    }
+
+    setStateAfterDelay = () => {
         setTimeout(() => {
             this.setState({ fruits: ['banana', 'apple', 'orange', 'vodka', 'kiwi'] });
         }, 1500);

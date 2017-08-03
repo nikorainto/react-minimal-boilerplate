@@ -16,6 +16,7 @@ class FirstComponent extends Component {
     // This is how to create a function in React component
     sayMyName = (fruit) => {
         alert("Hello, I'm " + fruit);
+        return fruit;
     }
 
     // Every time this component is called, return a new element with the given values
